@@ -241,11 +241,9 @@
     <h2 class="section-title">Request a shipment quote</h2>
     <p class="lead">Tell us what you need to move. We'll come back with options and an indicative rate — usually within one business day.</p>
 
-    <!--
-      ACTION NOTE (Fernando): replace the form "action" below with your free Formspree
-      endpoint (formspree.io) so inquiries arrive in your email. No server needed.
-    -->
-    <form class="form-grid" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
+    <form class="form-grid" action="https://formspree.io/f/mykqwwka" method="POST">
+      <input type="hidden" name="_subject" value="New shipment quote request — Stella VOCC website" />
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
       <div>
         <label for="name">Name *</label>
         <input id="name" name="name" required />
