@@ -84,7 +84,14 @@
   .card p { color: var(--g600); font-size: .97rem; }
 
   /* market letter band */
-  .market { background: var(--navy); color: #fff; }
+  .market { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+  .market .wrap { position: relative; z-index: 1; }
+  .market-map { position: absolute; top: 50%; right: -4%; transform: translateY(-50%); width: min(820px, 78%); aspect-ratio: 1000 / 620; height: auto; opacity: .14; pointer-events: none; z-index: 0; }
+  .market-map .land { fill: none; stroke: var(--sky2); stroke-width: 2.2; stroke-linejoin: round; }
+  .market-map .water-line { stroke: var(--sky2); stroke-width: 1; stroke-dasharray: 2 7; opacity: .5; }
+  .market-map .port { fill: var(--sky2); }
+  .market-map .arc { fill: var(--sky2); }
+  @media (max-width: 760px) { .market-map { opacity: .09; right: -20%; width: 130%; } }
   .market h2, .market h3 { color: #fff; }
   .market .lead { color: #cfe3f3; }
   .letter-box { background: var(--navy2); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 36px; margin-top: 38px; }
@@ -217,6 +224,47 @@
 
 <!-- ===== MARKET LETTER ===== -->
 <section id="market" class="market">
+  <svg class="market-map" viewBox="0 0 1000 620" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- faint latitude / longitude grid -->
+    <line class="water-line" x1="0" y1="150" x2="1000" y2="150"/>
+    <line class="water-line" x1="0" y1="310" x2="1000" y2="310"/>
+    <line class="water-line" x1="0" y1="470" x2="1000" y2="470"/>
+    <line class="water-line" x1="250" y1="0" x2="250" y2="620"/>
+    <line class="water-line" x1="550" y1="0" x2="550" y2="620"/>
+    <line class="water-line" x1="820" y1="0" x2="820" y2="620"/>
+
+    <!-- Florida peninsula -->
+    <path class="land" d="M250 70 q18 60 4 120 q-6 28 -26 44"/>
+    <!-- US Gulf coast (Texas/Louisiana) -->
+    <path class="land" d="M40 70 q70 40 150 38 q40 -2 70 -28"/>
+    <!-- Yucatan / Mexico -->
+    <path class="land" d="M120 250 q40 -50 70 -10 q14 22 -2 56 q-30 36 -60 6 q-18 -22 -8 -52z"/>
+    <!-- Central America arc (down to Panama) -->
+    <path class="land" d="M150 330 q60 40 120 70 q70 38 150 58 q60 16 120 18"/>
+    <!-- Cuba -->
+    <path class="land" d="M330 230 q90 -22 180 6 q-60 28 -130 18 q-32 -6 -50 -24z"/>
+    <!-- Hispaniola (Haiti / DR) -->
+    <path class="land" d="M560 270 q55 -14 95 6 q-22 24 -64 18 q-22 -4 -31 -24z"/>
+    <!-- Puerto Rico -->
+    <path class="land" d="M700 300 q30 -8 52 4 q-18 14 -42 8z"/>
+    <!-- Northern South America (Colombia / Venezuela) -->
+    <path class="land" d="M520 500 q90 -30 200 -22 q90 8 200 40 q40 14 80 14 M620 478 q40 -30 90 -28"/>
+
+    <!-- Lesser Antilles arc (island dots) -->
+    <circle class="arc" cx="800" cy="330" r="4"/>
+    <circle class="arc" cx="815" cy="370" r="4"/>
+    <circle class="arc" cx="822" cy="408" r="4"/>
+    <circle class="arc" cx="824" cy="446" r="4"/>
+
+    <!-- key port markers -->
+    <circle class="port" cx="245" cy="232" r="6"/>   <!-- South Florida -->
+    <circle class="port" cx="70"  cy="92"  r="6"/>   <!-- Houston -->
+    <circle class="port" cx="470" cy="262" r="6"/>   <!-- Kingston -->
+    <circle class="port" cx="620" cy="292" r="6"/>   <!-- Rio Haina -->
+    <circle class="port" cx="640" cy="500" r="6"/>   <!-- Pto Cabello / La Guaira -->
+    <circle class="port" cx="540" cy="520" r="6"/>   <!-- Cartagena -->
+    <circle class="port" cx="430" cy="470" r="6"/>   <!-- Colón -->
+  </svg>
   <div class="wrap">
     <p class="eyebrow">Free Weekly Intelligence</p>
     <h2 class="section-title">The Stella Market Letter</h2>
