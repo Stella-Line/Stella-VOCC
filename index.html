@@ -95,6 +95,17 @@
   table.rates td { color: #dbeafe; }
   .disc-mini { font-size: .78rem; color: #93b4d0; margin-top: 8px; font-style: italic; }
   .badge-ofac { display:inline-flex; align-items:center; gap:6px; background: rgba(14,165,233,.16); color: var(--sky2); border:1px solid rgba(14,165,233,.4); padding: 4px 11px; border-radius: 20px; font-size: .72rem; font-weight: 700; letter-spacing: .4px; font-style: normal; }
+  .letter-section { margin-top: 34px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,.12); }
+  .letter-h { display:flex; align-items:center; gap:9px; font-family:'Space Grotesk',sans-serif; font-size: 1.18rem; font-weight: 700; color:#fff; letter-spacing:-0.01em; margin-bottom: 4px; }
+  .letter-h i { color: var(--sky2); font-size: 1.25rem; }
+  .letter-section > p { color:#cfe3f3; font-size:.96rem; margin-bottom: 6px; }
+  .rec-list { list-style:none; margin-top: 8px; display:grid; gap:12px; }
+  .rec-list li { display:flex; gap:12px; color:#dbeafe; font-size:.95rem; }
+  .rec-list i { color: var(--green); font-size:1.15rem; flex-shrink:0; margin-top:2px; }
+  .rec-list strong { color:#fff; }
+  .notice-box { margin-top: 16px; background: rgba(14,165,233,.08); border:1px solid rgba(14,165,233,.3); border-left:3px solid var(--sky2); border-radius: 10px; padding: 16px 18px; }
+  .notice-box .nh { display:flex; align-items:center; gap:8px; color: var(--sky2); font-weight:700; font-size:.82rem; letter-spacing:.5px; text-transform:uppercase; margin-bottom:7px; }
+  .notice-box p { color:#bcd4e8; font-size:.85rem; line-height:1.6; margin:0; }
   .subscribe { margin-top: 28px; display: flex; gap: 10px; flex-wrap: wrap; }
   .subscribe input { flex: 1 1 260px; padding: 13px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.07); color: #fff; font-size: 1rem; }
   .subscribe input::placeholder { color: #9fc0db; }
@@ -207,23 +218,81 @@
         <span>•</span>
         <span><i class="ph ph-calendar-blank"></i> Week of June 26, 2026</span>
       </div>
-      <h3>South Florida → Caribbean: Feeder Space Tightens as Peak Season Peaks Early</h3>
-      <p style="color:#dbeafe; margin-bottom:14px;">Transpacific rates jumped again this week — Asia–US West Coast +19% to ~$5,700/FEU and Asia–US East Coast +13% to ~$7,400/FEU (Freightos, June 24). As mainline capacity is pulled toward these high-rate lanes, Caribbean and Gulf feeder space is tightening. Bunker costs have eased (down ~12% since early June) but remain ~40% above February. Carriers have announced further July increases. <strong>Book early.</strong></p>
-      <p style="color:#dbeafe; margin-bottom:6px;">Indicative FCL ocean freight, South Florida to key Caribbean ports (week of June 26, 2026):</p>
-      <table class="rates">
-        <thead>
-          <tr><th>Destination</th><th>Main Port</th><th>20ft (TEU)</th><th>40ft (FEU)</th><th>Transit</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Bahamas</td><td>Nassau / Freeport</td><td>$1,050–1,900</td><td>$1,700–2,800</td><td>2–4 days</td></tr>
-          <tr><td>Dominican Republic</td><td>Rio Haina</td><td>$1,400–2,350</td><td>$2,000–3,450</td><td>4–6 days</td></tr>
-          <tr><td>Haiti</td><td>Port-au-Prince</td><td>$1,600–2,550</td><td>$2,250–3,650</td><td>4–7 days</td></tr>
-          <tr><td>Jamaica</td><td>Kingston</td><td>$1,600–2,600</td><td>$2,350–3,900</td><td>5–8 days</td></tr>
-          <tr><td>Trinidad &amp; Tobago</td><td>Port of Spain</td><td>$2,100–3,400</td><td>$2,950–4,700</td><td>9–14 days</td></tr>
-          <tr><td>Panama</td><td>Colón / Balboa</td><td>$1,550–2,450</td><td>$2,200–3,450</td><td>5–8 days</td></tr>
-        </tbody>
-      </table>
-      <p class="disc-mini">Indicative port-to-port ocean freight only. BAF, THC, documentation and surcharges additional. Rates are market benchmarks, not a binding quotation. Sources: Freightos Baltic Index (June 24, 2026); carrier announcements. &nbsp;<span class="badge-ofac"><i class="ph ph-warning"></i> VENEZUELA: OFAC compliance required</span></p>
+      <h3>Feeder Space Tightens as Peak Season Peaks Early</h3>
+      <p style="color:#dbeafe; margin-bottom:4px;">The global container market is in active peak-season mode, and that pressure is reaching our region. Transpacific rates jumped again this week as carriers held June GRIs and Peak Season Surcharges firm. As mainline capacity is pulled toward those high-rate east–west lanes, secondary trades — including the Gulf of America and Caribbean Basin — are tightening. Below is our read for the week, plus a route focus on Venezuela.</p>
+
+      <!-- 1. GLOBAL SNAPSHOT -->
+      <div class="letter-section">
+        <div class="letter-h"><i class="ph ph-globe-hemisphere-west"></i> 1 · Global Ocean Freight Snapshot</div>
+        <p>Key lane movements this week (source: Freightos Baltic Index, June 24, 2026):</p>
+        <table class="rates">
+          <thead>
+            <tr><th>Trade Lane</th><th>Current Rate</th><th>Weekly Change</th><th>Direction</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Asia → US West Coast</td><td>~$5,700/FEU</td><td>+19%</td><td>↑ Surging</td></tr>
+            <tr><td>Asia → US East Coast</td><td>~$7,400/FEU</td><td>+13%</td><td>↑ Surging</td></tr>
+            <tr><td>Asia → N. Europe</td><td>~$4,700/FEU</td><td>+13%</td><td>↑ Rising</td></tr>
+            <tr><td>Asia → Mediterranean</td><td>~$6,300/FEU</td><td>+16%</td><td>↑ Rising</td></tr>
+          </tbody>
+        </table>
+        <p><strong style="color:#fff;">Macro drivers:</strong> Bunker costs have eased — down ~12% since early June and ~25% from March highs — but remain roughly 40% above February levels. A US–Iran memorandum is gradually reopening the Strait of Hormuz, beginning with feeder services. Carriers have announced steep further increases for July, with some targeting Asia–Europe rates up to $3,000/FEU higher. The early peak means meaningful relief is unlikely before Q4.</p>
+      </div>
+
+      <!-- 2. GULF & CARIBBEAN -->
+      <div class="letter-section">
+        <div class="letter-h"><i class="ph ph-anchor"></i> 2 · Gulf of America &amp; Caribbean Basin</div>
+        <p>Firm-to-tightening conditions as vessels are redeployed to the busier mainline trades. Port Everglades — the #1 US gateway for Caribbean cargo, handling 1.16M+ TEUs in FY2025 — remains the primary hub, with Kingston (KCT) gradually normalizing after the 2024–25 congestion. Indicative FCL ocean freight, South Florida to key Caribbean ports (week of June 26, 2026):</p>
+        <table class="rates">
+          <thead>
+            <tr><th>Destination</th><th>Main Port</th><th>20ft (TEU)</th><th>40ft (FEU)</th><th>Transit</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Bahamas</td><td>Nassau / Freeport</td><td>$1,050–1,900</td><td>$1,700–2,800</td><td>2–4 days</td></tr>
+            <tr><td>Dominican Republic</td><td>Rio Haina</td><td>$1,400–2,350</td><td>$2,000–3,450</td><td>4–6 days</td></tr>
+            <tr><td>Haiti</td><td>Port-au-Prince</td><td>$1,600–2,550</td><td>$2,250–3,650</td><td>4–7 days</td></tr>
+            <tr><td>Jamaica</td><td>Kingston</td><td>$1,600–2,600</td><td>$2,350–3,900</td><td>5–8 days</td></tr>
+            <tr><td>Trinidad &amp; Tobago</td><td>Port of Spain</td><td>$2,100–3,400</td><td>$2,950–4,700</td><td>9–14 days</td></tr>
+            <tr><td>Panama</td><td>Colón / Balboa</td><td>$1,550–2,450</td><td>$2,200–3,450</td><td>5–8 days</td></tr>
+          </tbody>
+        </table>
+        <p><strong style="color:#fff;">Break-bulk / LCL:</strong> Currently quoted at approximately <strong>$60–$175 per revenue ton</strong> (W/M basis) depending on destination, cargo type and port conditions. Haiti and Venezuela attract the highest risk premiums in the region.</p>
+      </div>
+
+      <!-- 3. ROUTE FOCUS: VENEZUELA -->
+      <div class="letter-section">
+        <div class="letter-h"><i class="ph ph-map-pin"></i> 3 · Route Focus: U.S. Gulf → Puerto Cabello &amp; La Guaira, Venezuela</div>
+        <p>Our specialty lane. Puerto Cabello (Carabobo) and La Guaira (near Caracas) are Venezuela's two principal commercial ports, handling containers, break-bulk and project cargo. Indicative freight from the U.S. Gulf (June 2026):</p>
+        <table class="rates">
+          <thead>
+            <tr><th>Service</th><th>Estimated Rate</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>20ft Container (TEU)</td><td>$2,300–3,700</td><td>Incl. Venezuela risk surcharge</td></tr>
+            <tr><td>40ft Container (FEU)</td><td>$3,300–5,300</td><td>Subject to OFAC clearance pre-booking</td></tr>
+            <tr><td>Break-Bulk / LCL (per RT)</td><td>$130–200/RT</td><td>Reflects sanctions environment, limited carriers</td></tr>
+            <tr><td>Transit Time</td><td>10–18 days</td><td>Often via transshipment (Curaçao / Kingston)</td></tr>
+          </tbody>
+        </table>
+        <div class="notice-box">
+          <div class="nh"><i class="ph ph-warning"></i> U.S. Sanctions &amp; Compliance — Venezuela</div>
+          <p>Shipping from the U.S. to Venezuela is subject to active U.S. Treasury OFAC sanctions. While cargo is not categorically prohibited, it requires strict compliance: full SDN screening of all parties, no shipments to government-owned/controlled entities without a specific OFAC license, restricted USD payment channels, and complete booking details at time of request. Stella Line handles this discipline as part of every Venezuela booking, but recommends all customers obtain independent legal and sanctions-compliance counsel. Stella Line does not provide legal or sanctions advice.</p>
+        </div>
+      </div>
+
+      <!-- 4. OUTLOOK & RECOMMENDATIONS -->
+      <div class="letter-section">
+        <div class="letter-h"><i class="ph ph-strategy"></i> 4 · Outlook &amp; Commercial Recommendations</div>
+        <ul class="rec-list">
+          <li><i class="ph ph-check-circle"></i><span><strong>Book early — peak-season pressure is real.</strong> Capacity is tight and rates are rising on multiple lanes. Secure July/August space and rates now; waiting for spot rates to drop is a high-risk strategy.</span></li>
+          <li><i class="ph ph-check-circle"></i><span><strong>Lock in rates where possible.</strong> For recurring Caribbean cargo, consider a short-term (30–90 day) contract rate. Spot rates are volatile and likely to keep rising through Q3 2026.</span></li>
+          <li><i class="ph ph-check-circle"></i><span><strong>Budget conservatively for fuel.</strong> A gradual Strait of Hormuz reopening may ease bunker costs eventually, but not soon — do not assume surcharges drop in Q3.</span></li>
+          <li><i class="ph ph-check-circle"></i><span><strong>Venezuela — prepare compliance first.</strong> OFAC screening and carrier pre-approval must be completed before any booking. Allow 3–5 business days lead time for compliance processing.</span></li>
+          <li><i class="ph ph-check-circle"></i><span><strong>Project &amp; break-bulk windows.</strong> For oversized or heavy-lift cargo, June–early July may still offer reasonable rates on feeder trades before peak fully hits. Contact us to discuss vessel options.</span></li>
+        </ul>
+      </div>
+
+      <p class="disc-mini" style="margin-top:26px;">Indicative port-to-port ocean freight only. BAF, THC, documentation and surcharges additional. Rates are market benchmarks, not a binding quotation. Sources: Freightos Baltic Index (June 24, 2026); UNCTAD; Maersk &amp; carrier announcements; C.H. Robinson ocean updates. &nbsp;<span class="badge-ofac"><i class="ph ph-warning"></i> VENEZUELA: OFAC compliance required</span></p>
 
       <div class="subscribe">
         <input type="email" id="sub-email" placeholder="Your work email — get the letter every week" />
