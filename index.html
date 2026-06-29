@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Stella Line — Vessel Operator, Ship &amp; Cargo Brokerage | South Florida &amp; Caribbean</title>
-<meta name="description" content="Stella Line — vessel operating common carrier and ship & cargo brokerage for the Gulf of America, Caribbean Basin and northern South America. Weekly freight market intelligence and fast shipment quotes from South Florida." />
+<meta name="description" content="Ship &amp; cargo brokerage from Houston, Miami and Fort Lauderdale to Venezuela, Colombia and the Caribbean. Stella Line — vessel chartering, break-bulk and spot shipments, with free weekly freight market intelligence." />
 <meta name="keywords" content="vessel operator, Caribbean freight rates, South Florida shipping, ship broker Miami, cargo broker, Gulf of America freight, project cargo Caribbean, ocean freight quote, break bulk Caribbean, Puerto Cabello La Guaira shipping, Houston to Venezuela freight" />
 <meta name="author" content="Stella Line LLC" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -56,6 +56,34 @@
     "addressCountry": "US"
   },
   "knowsAbout": ["ship brokerage", "cargo brokerage", "vessel chartering", "break-bulk shipping", "project cargo", "Caribbean ocean freight", "OFAC compliance Venezuela"]
+}
+</script>
+
+<!-- Structured data: Service + service areas -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Ship and cargo brokerage, vessel chartering and ocean freight",
+  "provider": { "@type": "Organization", "name": "Stella Line LLC", "url": "https://www.stella-line.com/" },
+  "areaServed": [
+    { "@type": "City", "name": "Houston" },
+    { "@type": "City", "name": "Miami" },
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "Country", "name": "Venezuela" },
+    { "@type": "Country", "name": "Colombia" },
+    { "@type": "Place", "name": "Caribbean Basin" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Trade lanes",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Houston to Venezuela ocean freight" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Miami and Fort Lauderdale to Caribbean shipping" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "U.S. Gulf to Colombia break-bulk and container freight" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Puerto Cabello and La Guaira, Venezuela cargo shipping" } }
+    ]
+  }
 }
 </script>
 
@@ -132,6 +160,21 @@
   .card .ic { width: 52px; height: 52px; border-radius: 12px; background: var(--sky4); color: var(--sky); display: grid; place-items: center; font-size: 1.7rem; margin-bottom: 16px; }
   .card h3 { font-size: 1.2rem; margin-bottom: 8px; }
   .card p { color: var(--g600); font-size: .97rem; }
+
+  /* ports & trade lanes */
+  .lanes { background: var(--g50); }
+  .lanes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 38px; }
+  @media (max-width: 760px) { .lanes-grid { grid-template-columns: 1fr; } }
+  .lane-col { background: #fff; border: 1px solid var(--g200); border-radius: var(--r); padding: 28px; }
+  .lane-h { display: flex; align-items: center; gap: 10px; font-size: 1.12rem; margin-bottom: 16px; }
+  .lane-h i { color: var(--sky); font-size: 1.3rem; }
+  .lane-list { list-style: none; display: grid; gap: 12px; }
+  .lane-list li { color: var(--g600); font-size: .98rem; padding-left: 18px; position: relative; }
+  .lane-list li::before { content: ''; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 50%; background: var(--sky2); }
+  .lane-list strong { color: var(--navy); }
+  .lane-tag { display: inline-block; background: var(--sky4); color: var(--sky); font-size: .7rem; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; padding: 2px 8px; border-radius: 12px; margin-left: 4px; vertical-align: middle; }
+  .lanes-foot { margin-top: 26px; color: var(--g600); font-size: 1rem; }
+  .lanes-foot strong { color: var(--navy); }
 
   /* market letter band */
   .market { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
@@ -215,6 +258,7 @@
     </a>
     <nav class="links">
       <a href="#services">Services</a>
+      <a href="#lanes">Trade Lanes</a>
       <a href="#market">Market Letter</a>
       <a href="#about">About</a>
       <a href="#quote" class="btn btn-nav"><i class="ph ph-paper-plane-tilt"></i> Get a Quote</a>
@@ -269,6 +313,39 @@
         <p>A proven process for time-sensitive, one-time shipments. Tell us the cargo and the destination — we come back with options and an indicative rate quickly.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== PORTS & TRADE LANES (geo SEO) ===== -->
+<section id="lanes" class="lanes">
+  <div class="wrap">
+    <p class="eyebrow">Where We Ship</p>
+    <h2 class="section-title">Ports &amp; trade lanes we serve</h2>
+    <p class="lead">Stella Line moves containers, break-bulk and project cargo from the U.S. Gulf and South Florida to Venezuela, Colombia and across the Caribbean. These are the load ports and destination markets we work every week.</p>
+
+    <div class="lanes-grid">
+      <div class="lane-col">
+        <h3 class="lane-h"><i class="ph ph-anchor"></i> Load ports — United States &amp; Mexico</h3>
+        <ul class="lane-list">
+          <li><strong>Houston, Texas</strong> — our primary U.S. Gulf gateway for containers, break-bulk and project cargo</li>
+          <li><strong>Miami &amp; Fort Lauderdale (Port Everglades)</strong> — the #1 U.S. hub for Caribbean trade</li>
+          <li><strong>U.S. North East</strong> — New York / New Jersey area</li>
+          <li><strong>Mexico</strong> — Altamira &amp; Veracruz</li>
+        </ul>
+      </div>
+      <div class="lane-col">
+        <h3 class="lane-h"><i class="ph ph-map-pin"></i> Destination markets</h3>
+        <ul class="lane-list">
+          <li><strong>Venezuela</strong> — Puerto Cabello &amp; La Guaira <span class="lane-tag">our specialty</span></li>
+          <li><strong>Colombia</strong> — Cartagena &amp; Barranquilla</li>
+          <li><strong>Dominican Republic</strong> — Rio Haina · <strong>Jamaica</strong> — Kingston</li>
+          <li><strong>Haiti</strong> — Port-au-Prince · <strong>Bahamas</strong> — Nassau / Freeport</li>
+          <li><strong>Trinidad &amp; Tobago</strong> — Port of Spain · <strong>Panama</strong> — Colón / Balboa</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="lanes-foot">Popular lanes include <strong>Houston to Venezuela</strong>, <strong>Miami to the Dominican Republic</strong>, <strong>Fort Lauderdale to the Caribbean</strong>, and <strong>U.S. Gulf to Colombia</strong>. Shipping to Venezuela is subject to full OFAC compliance review. <a href="#quote">Request a quote for your lane →</a></p>
   </div>
 </section>
 
@@ -448,10 +525,10 @@
       </div>
       <div>
         <h4>Coverage</h4>
-        <a href="#">Caribbean Basin</a>
-        <a href="#">Central America</a>
-        <a href="#">Northern South America</a>
-        <a href="#">Project &amp; Heavy-Lift</a>
+        <a href="#lanes">Houston &amp; U.S. Gulf</a>
+        <a href="#lanes">Miami &amp; Fort Lauderdale</a>
+        <a href="#lanes">Venezuela — Pto Cabello &amp; La Guaira</a>
+        <a href="#lanes">Colombia &amp; the Caribbean</a>
       </div>
     </div>
     <div class="disclaimer">
