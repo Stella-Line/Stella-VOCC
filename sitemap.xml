@@ -14,6 +14,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.stella-line.com/market-intelligence.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.stella-line.com/insights/peak-season-caribbean.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.stella-line.com/insights/colombia-cartagena-capacity.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.stella-line.com/insights/mexico-altamira-veracruz.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.stella-line.com/market-letter-2026-07-03.html</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>yearly</changefreq>

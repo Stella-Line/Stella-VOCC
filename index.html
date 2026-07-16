@@ -148,6 +148,23 @@
   .corridor-tags span { display:inline-flex; align-items:center; gap:7px; font-size: .82rem; color: #d6e8f5; border: 1px solid rgba(255,255,255,.2); padding: 7px 13px; border-radius: 22px; }
   .corridor-tags i { color: var(--sky2); }
 
+  /* ---------- Market headlines strip ---------- */
+  .headlines { background: var(--navy); border-top: 1px solid rgba(255,255,255,.08); padding: 22px 0 26px; }
+  .headlines-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+  .hl-live { display: inline-flex; align-items: center; gap: 8px; color: var(--sky2); font-weight: 700; font-size: .74rem; letter-spacing: 1.5px; text-transform: uppercase; }
+  .hl-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 0 rgba(34,197,94,.6); animation: hlpulse 2s infinite; }
+  @keyframes hlpulse { 0%{box-shadow:0 0 0 0 rgba(34,197,94,.5);} 70%{box-shadow:0 0 0 7px rgba(34,197,94,0);} 100%{box-shadow:0 0 0 0 rgba(34,197,94,0);} }
+  .hl-all { color: #cfe3f3; font-size: .85rem; font-weight: 600; text-decoration: none; }
+  .hl-all:hover { color: var(--sky2); }
+  .headlines-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
+  @media (max-width: 980px) { .headlines-grid { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 560px) { .headlines-grid { grid-template-columns: 1fr; } }
+  .hl-item { display: flex; flex-direction: column; gap: 8px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: 16px 18px; text-decoration: none; transition: border-color .15s, background .15s, transform .15s; }
+  .hl-item:hover { border-color: var(--sky2); background: rgba(255,255,255,.07); transform: translateY(-2px); }
+  .hl-tag { align-self: flex-start; font-size: .66rem; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--navy); background: var(--sky2); padding: 3px 9px; border-radius: 20px; }
+  .hl-item p { color: #eaf2fb; font-size: .98rem; font-weight: 600; line-height: 1.35; margin: 0; }
+  .hl-lock { display: inline-flex; align-items: center; gap: 5px; margin-top: auto; color: #93b4d0; font-size: .74rem; font-weight: 600; }
+
   /* ---------- Sections ---------- */
   section { padding: 76px 0; }
   .eyebrow { color: var(--sky); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: .78rem; }
@@ -261,7 +278,7 @@
     <nav class="links">
       <a href="#services">Services</a>
       <a href="#lanes">Trade Lanes</a>
-      <a href="#market">Market Letter</a>
+      <a href="market-intelligence.html">Market Intelligence</a>
       <a href="#about">About</a>
       <a href="https://stella-line.vercel.app/app/register.html" target="_blank" rel="noopener">Stella Tools</a>
       <a href="#quote" class="btn btn-nav"><i class="ph ph-paper-plane-tilt"></i> Get a Quote</a>
@@ -290,6 +307,38 @@
       <span><i class="ph ph-stack"></i> Project &amp; Break-Bulk</span>
       <span><i class="ph ph-boat"></i> Vessel Chartering</span>
       <span><i class="ph ph-map-pin"></i> Venezuela: Puerto Cabello &amp; La Guaira</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARKET HEADLINES STRIP ===== -->
+<section class="headlines">
+  <div class="wrap">
+    <div class="headlines-head">
+      <span class="hl-live"><span class="hl-dot"></span> Market Intelligence</span>
+      <a href="market-intelligence.html" class="hl-all">All market intelligence →</a>
+    </div>
+    <div class="headlines-grid">
+      <a href="insights/peak-season-caribbean.html" class="hl-item">
+        <span class="hl-tag">Caribbean</span>
+        <p>Is peak season topping out? What it means for Caribbean feeder space</p>
+        <span class="hl-lock" style="color:#7bdca0;"><i class="ph ph-arrow-right"></i> Read insight</span>
+      </a>
+      <a href="insights/colombia-cartagena-capacity.html" class="hl-item">
+        <span class="hl-tag">Colombia</span>
+        <p>Cartagena capacity: what the transshipment squeeze means for Colombia cargo</p>
+        <span class="hl-lock" style="color:#7bdca0;"><i class="ph ph-arrow-right"></i> Read insight</span>
+      </a>
+      <a href="insights/mexico-altamira-veracruz.html" class="hl-item">
+        <span class="hl-tag">Mexico</span>
+        <p>Altamira &amp; Veracruz: Mexico's Gulf ports as a Caribbean springboard</p>
+        <span class="hl-lock" style="color:#7bdca0;"><i class="ph ph-arrow-right"></i> Read insight</span>
+      </a>
+      <a href="market-letter.html" class="hl-item">
+        <span class="hl-tag" style="background:#22c55e;color:#052e16;">Free · Letter</span>
+        <p>Weekly Market Letter — rates climb again, but is demand peaking?</p>
+        <span class="hl-lock" style="color:#7bdca0;"><i class="ph ph-lock-simple-open"></i> Free to read</span>
+      </a>
     </div>
   </div>
 </section>
