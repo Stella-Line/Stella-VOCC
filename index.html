@@ -164,6 +164,11 @@
   .hl-tag { align-self: flex-start; font-size: .66rem; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--navy); background: var(--sky2); padding: 3px 9px; border-radius: 20px; }
   .hl-item p { color: #eaf2fb; font-size: .98rem; font-weight: 600; line-height: 1.35; margin: 0; }
   .hl-lock { display: inline-flex; align-items: center; gap: 5px; margin-top: auto; color: #93b4d0; font-size: .74rem; font-weight: 600; }
+  .hl-src { display: inline-flex; align-items: center; gap: 5px; margin-top: auto; color: #93b4d0; font-size: .72rem; font-weight: 600; }
+  .hl-src i { color: var(--sky2); }
+  .hl-item.lead { grid-column: 1 / -1; background: linear-gradient(158deg, rgba(56,189,248,.12), rgba(255,255,255,.04)); border-color: rgba(56,189,248,.3); }
+  .hl-item.lead p { font-size: 1.3rem; font-weight: 700; line-height: 1.2; }
+  @media (max-width: 560px) { .hl-item.lead p { font-size: 1.1rem; } }
 
   /* ---------- Sections ---------- */
   section { padding: 76px 0; }
@@ -319,37 +324,45 @@
       <a href="market-intelligence.html" class="hl-all">Visit the newsroom →</a>
     </div>
     <div class="headlines-grid">
-      <a href="insights/fuel-hormuz-bunker-costs.html" class="hl-item">
-        <span class="hl-tag" style="background:#f59e0b;color:#3a2a06;">Fuel · Hormuz</span>
-        <p>Fuel &amp; the Strait of Hormuz: what the Iran conflict means for freight costs</p>
-        <span class="hl-lock" style="color:#7bdca0;"><i class="ph ph-arrow-right"></i> Read insight</span>
+
+      <!-- LEAD STORY -->
+      <a href="market-letter.html" class="hl-item lead">
+        <span class="hl-tag" style="background:#f59e0b;color:#3a2a06;">Lead · Weekly Market Letter</span>
+        <p>The peak that wouldn't break finally did — and carriers are fighting to put it back</p>
+        <span class="hl-lock" style="color:#7bdca0;"><i class="ph ph-lock-simple-open"></i> Free to read · Oct 9, 2026</span>
       </a>
-      <a href="insights/venezuela-fuel-risk-premium.html" class="hl-item">
-        <span class="hl-tag">Venezuela</span>
-        <p>Fuel, Hormuz &amp; the Venezuela risk premium: what shippers should watch</p>
-        <span class="hl-lock" style="color:#7bdca0;"><i class="ph ph-arrow-right"></i> Read insight</span>
+
+      <!-- OUR STORIES -->
+      <a href="news/transpacific-peak-turns-oct-2026.html" class="hl-item">
+        <span class="hl-tag">Markets · Rates</span>
+        <p>Transpacific peak turns as Golden Week flattens rates — carriers answer with FAK hikes</p>
+        <span class="hl-lock" style="color:#7bdca0;"><i class="ph ph-arrow-right"></i> Read story</span>
       </a>
-      <a href="insights/peak-season-caribbean.html" class="hl-item">
-        <span class="hl-tag">Caribbean</span>
-        <p>Is peak season topping out? What it means for Caribbean feeder space</p>
-        <span class="hl-lock" style="color:#7bdca0;"><i class="ph ph-arrow-right"></i> Read insight</span>
+      <a href="news/ofac-gl49b-venezuela-ventures.html" class="hl-item">
+        <span class="hl-tag">Sanctions · Venezuela</span>
+        <p>OFAC's GL 49B moves Venezuela from moving oil to structuring the deals</p>
+        <span class="hl-lock" style="color:#7bdca0;"><i class="ph ph-arrow-right"></i> Read story</span>
       </a>
-      <a href="insights/colombia-cartagena-capacity.html" class="hl-item">
-        <span class="hl-tag">Colombia</span>
-        <p>Cartagena capacity: what the transshipment squeeze means for Colombia cargo</p>
-        <span class="hl-lock" style="color:#7bdca0;"><i class="ph ph-arrow-right"></i> Read insight</span>
+
+      <!-- FROM THE WIRE (curated, external) -->
+      <a href="https://maritime-executive.com/article/panama-canal-eases-restrictions-adding-transit-slot-and-maximum-draft" target="_blank" rel="noopener" class="hl-item">
+        <span class="hl-tag" style="background:#475569;color:#fff;">Wire · Panama</span>
+        <p>Panama Canal eases draft back to 49 ft and restores transit slots</p>
+        <span class="hl-src"><i class="ph ph-arrow-square-out"></i> The Maritime Executive</span>
       </a>
-      <a href="insights/mexico-altamira-veracruz.html" class="hl-item">
-        <span class="hl-tag">Mexico</span>
-        <p>Altamira &amp; Veracruz: Mexico's Gulf ports as a Caribbean springboard</p>
-        <span class="hl-lock" style="color:#7bdca0;"><i class="ph ph-arrow-right"></i> Read insight</span>
+      <a href="https://ofac.treasury.gov/selected-general-licenses-issued-ofac" target="_blank" rel="noopener" class="hl-item">
+        <span class="hl-tag" style="background:#475569;color:#fff;">Wire · Sanctions</span>
+        <p>OFAC finalizes updated Venezuela oil-sector general licenses</p>
+        <span class="hl-src"><i class="ph ph-arrow-square-out"></i> U.S. Treasury (OFAC)</span>
       </a>
-      <a href="market-letter.html" class="hl-item">
-        <span class="hl-tag" style="background:#22c55e;color:#052e16;">Free · Letter</span>
-        <p>Weekly Market Letter — the transpacific peak finally turns after Golden Week; carriers fight back with mid-October rate hikes</p>
-        <span class="hl-lock" style="color:#7bdca0;"><i class="ph ph-lock-simple-open"></i> Free to read</span>
+      <a href="https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry" target="_blank" rel="noopener" class="hl-item">
+        <span class="hl-tag" style="background:#475569;color:#fff;">Wire · Rates</span>
+        <p>Golden Week lull drags global container spot rates lower</p>
+        <span class="hl-src"><i class="ph ph-arrow-square-out"></i> Drewry</span>
       </a>
+
     </div>
+    <p style="text-align:center;margin-top:16px;"><a href="market-intelligence.html" class="hl-all">See all coverage in the newsroom →</a></p>
   </div>
 </section>
 

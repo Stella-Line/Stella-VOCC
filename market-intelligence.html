@@ -105,6 +105,7 @@
       <button data-filter="colombia">Colombia</button>
       <button data-filter="mexico">Mexico</button>
     </div>
+    <p style="font-size:.82rem;color:var(--g600);margin:10px 0 0;"><i class="ph ph-folder-open" style="color:var(--sky);"></i> Topic hub: <a href="topics/venezuela.html" style="font-weight:700;">Venezuela</a> — our specialty corridor, in depth.</p>
 
     <div class="mi-layout">
       <div class="mi-main">
@@ -386,6 +387,20 @@
       pills.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-filter') === 'all'); });
       apply('all');
     });
+    // deep-link support: market-intelligence.html#venezuela
+    function fromHash(){
+      var h = (location.hash || '').replace('#','').toLowerCase();
+      if (!h) return;
+      var target = null;
+      pills.forEach(function(b){ if (b.getAttribute('data-filter') === h) target = b; });
+      if (target){
+        pills.forEach(function(b){ b.classList.remove('active'); });
+        target.classList.add('active');
+        apply(h);
+      }
+    }
+    fromHash();
+    window.addEventListener('hashchange', fromHash);
   })();
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
