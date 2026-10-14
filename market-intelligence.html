@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Market Intelligence — Caribbean, U.S. Gulf &amp; Mexico Ocean Freight | Stella Line</title>
-<meta name="description" content="Stella Line Market Intelligence — weekly freight market letter and short insights covering the U.S. Gulf, South Florida, Mexico, the Caribbean, Venezuela and Colombia. Rates, capacity, ports and compliance." />
+<title>Maritime Intelligence — Caribbean, U.S. Gulf &amp; Venezuela Shipping News | Stella Line</title>
+<meta name="description" content="Stella Line Maritime Intelligence — ocean freight news, rates and sanctions intelligence for the Gulf of America, Caribbean, Venezuela and Colombia. Weekly market letter, desk insights, and curated industry headlines." />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <link rel="canonical" href="https://www.stella-line.com/market-intelligence.html" />
 <meta property="og:site_name" content="Stella Line LLC" />
@@ -40,6 +40,35 @@
   .mi-access { text-align:right; font-size:.76rem; font-weight:700; white-space:nowrap; }
   .a-free{ color:#16a34a; } .a-mem{ color:#b45309; }
   @media(max-width:680px){ .mi-access{ text-align:left; } }
+
+  /* --- publication layout --- */
+  .mi-layout{ display:grid; grid-template-columns:1fr 330px; gap:36px; align-items:start; margin-top:22px; }
+  @media(max-width:900px){ .mi-layout{ grid-template-columns:1fr; } }
+  .feed-h{ font-size:.82rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--g400); margin:30px 0 6px; padding-bottom:10px; border-bottom:2px solid var(--g200); }
+  /* lead story */
+  .lead-card{ display:block; border:1px solid var(--g200); border-radius:16px; overflow:hidden; text-decoration:none; background:#fff; transition:border-color .15s, box-shadow .15s, transform .15s; }
+  .lead-card:hover{ border-color:var(--sky2); box-shadow:0 14px 30px rgba(12,35,64,.10); transform:translateY(-2px); }
+  .lead-card .lc-top{ background:linear-gradient(158deg,#0c2340 0%,#143a68 100%); color:#fff; padding:26px 28px 22px; }
+  .lead-card .lc-tag{ display:inline-flex; align-items:center; gap:6px; background:#f59e0b; color:#3a2a06; font-weight:800; font-size:.66rem; letter-spacing:1px; text-transform:uppercase; padding:5px 11px; border-radius:20px; }
+  .lead-card h2{ color:#fff; font-size:clamp(1.3rem,2.6vw,1.7rem); line-height:1.16; margin:14px 0 10px; }
+  .lead-card .lc-dek{ color:#dbeafe; font-size:1rem; margin:0; line-height:1.55; }
+  .lead-card .lc-meta{ display:flex; flex-wrap:wrap; gap:16px; padding:14px 28px; color:var(--g600); font-size:.82rem; }
+  .lead-card .lc-meta span{ display:inline-flex; align-items:center; gap:6px; }
+  .lead-card .lc-meta .free{ color:#16a34a; font-weight:700; }
+  /* news-in-brief "wire" */
+  .mi-rail{ position:sticky; top:84px; }
+  .wire{ border:1px solid var(--g200); border-radius:14px; overflow:hidden; background:#fff; }
+  .wire-head{ background:var(--navy); color:#fff; padding:14px 18px; display:flex; align-items:center; gap:9px; }
+  .wire-head .dot{ width:8px; height:8px; border-radius:50%; background:#22c55e; box-shadow:0 0 0 4px rgba(34,197,94,.25); flex-shrink:0; }
+  .wire-head h3{ color:#fff; font-size:.78rem; letter-spacing:1.5px; text-transform:uppercase; margin:0; font-family:'Plus Jakarta Sans'; }
+  .wire-item{ display:block; padding:14px 18px; border-top:1px solid var(--g200); text-decoration:none; transition:background .12s; }
+  .wire-item:hover{ background:var(--sky4); }
+  .wire-item .wtag{ font-size:.62rem; font-weight:800; letter-spacing:.6px; text-transform:uppercase; color:var(--sky); }
+  .wire-item h4{ font-size:.92rem; color:var(--navy); margin:4px 0 5px; line-height:1.25; font-family:'Plus Jakarta Sans'; font-weight:700; }
+  .wire-item p{ font-size:.8rem; color:var(--g600); margin:0 0 7px; line-height:1.5; }
+  .wire-item .src{ font-size:.71rem; color:var(--g400); display:flex; align-items:center; gap:5px; }
+  .wire-item .src i{ color:var(--sky); }
+  .wire-foot{ padding:12px 18px; font-size:.7rem; color:var(--g600); background:var(--sky4); border-top:1px solid var(--g200); line-height:1.55; }
 </style>
 </head>
 <body>
@@ -55,9 +84,9 @@
 
 <div class="masthead">
   <div class="wrap">
-    <p class="eyebrow">Free to read · Updated weekly</p>
-    <h1>Stella Line Market Intelligence</h1>
-    <p>Ocean freight conditions across the U.S. Gulf, South Florida, Mexico, the Caribbean, Venezuela and Colombia — our weekly market letter, plus short insights on the moves that matter for your cargo.</p>
+    <p class="eyebrow">Maritime Intelligence · Free to read</p>
+    <h1>Stella Line Maritime Intelligence</h1>
+    <p>Ocean freight news, rates and sanctions intelligence for the Gulf of America, Caribbean and Latin American trades — our weekly market letter and desk insights, plus the stories moving our lanes from around the industry.</p>
   </div>
 </div>
 
@@ -75,17 +104,26 @@
       <button>Colombia</button>
     </div>
 
-    <div class="mi-list">
+    <div class="mi-layout">
+      <div class="mi-main">
 
-      <!-- FREE flagship: weekly letter -->
-      <a class="mi-card" href="market-letter.html">
-        <div><div class="mi-meta">Oct 9, 2026</div><span class="mi-tag t-usg">Markets · Lead</span></div>
-        <div>
-          <h3>Weekly Market Letter — the peak that wouldn't break finally did, and carriers are fighting back</h3>
-          <p>Full snapshot: global rates, Caribbean FCL &amp; break-bulk by origin, Venezuela route focus, outlook.</p>
-        </div>
-        <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
-      </a>
+        <!-- LEAD STORY: this week's market letter -->
+        <a class="lead-card" href="market-letter.html">
+          <div class="lc-top">
+            <span class="lc-tag"><i class="ph ph-lightning"></i> Lead · Markets</span>
+            <h2>The peak that wouldn't break finally did — and carriers are fighting to put it back</h2>
+            <p class="lc-dek">Golden Week flattened the transpacific; now mid-October FAK hikes aim to defend the floor. Our full read on global rates, Caribbean lanes, the Venezuela route and the outlook.</p>
+          </div>
+          <div class="lc-meta">
+            <span><i class="ph ph-newspaper"></i> Weekly Market Letter · Issue 14</span>
+            <span><i class="ph ph-calendar-blank"></i> Oct 9, 2026</span>
+            <span class="free"><i class="ph ph-lock-simple-open"></i> Free to read</span>
+          </div>
+        </a>
+
+        <h2 class="feed-h">Latest from the desk</h2>
+
+        <div class="mi-list">
 
       <!-- INSIGHTS across regions -->
       <a class="mi-card" href="insights/fuel-hormuz-bunker-costs.html">
@@ -233,7 +271,53 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-    </div>
+        </div><!-- /.mi-list -->
+      </div><!-- /.mi-main -->
+
+      <!-- RIGHT RAIL: curated news-in-brief -->
+      <aside class="mi-rail">
+        <div class="wire">
+          <div class="wire-head"><span class="dot"></span><h3>News in brief · the wire</h3></div>
+
+          <a class="wire-item" href="https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry" target="_blank" rel="noopener">
+            <div class="wtag">Rates</div>
+            <h4>Golden Week lull drags spot rates lower</h4>
+            <p>Drewry's World Container Index slipped ~2% to about $4,351/40ft as transpacific and Asia–Europe softened over the holiday; blank sailings for the coming week eased to four, from eleven.</p>
+            <div class="src"><i class="ph ph-arrow-square-out"></i> Drewry · Oct 8, 2026</div>
+          </a>
+
+          <a class="wire-item" href="https://maritime-executive.com/article/panama-canal-eases-restrictions-adding-transit-slot-and-maximum-draft" target="_blank" rel="noopener">
+            <div class="wtag">Panama Canal</div>
+            <h4>Canal eases draft back to 49 ft, restores transit slots</h4>
+            <p>The Panama Canal Authority lifted the Neopanamax draft limit by a foot and will return to 10 daily Neopanamax transits from Oct 15, walking back an earlier plan for deeper cuts.</p>
+            <div class="src"><i class="ph ph-arrow-square-out"></i> The Maritime Executive · Oct 2026</div>
+          </a>
+
+          <a class="wire-item" href="https://ofac.treasury.gov/selected-general-licenses-issued-ofac" target="_blank" rel="noopener">
+            <div class="wtag">Sanctions · Venezuela</div>
+            <h4>OFAC finalizes updated Venezuela oil licenses</h4>
+            <p>Treasury made official a revised set of general licenses broadening authorized oil and petrochemical dealings, including GL 52C covering certain PdVSA transactions.</p>
+            <div class="src"><i class="ph ph-arrow-square-out"></i> U.S. Treasury (OFAC) · Sep 2026</div>
+          </a>
+
+          <a class="wire-item" href="https://gcaptain.com/france-seizes-another-shadow-fleet-tanker-russia-decries-piracy/" target="_blank" rel="noopener">
+            <div class="wtag">Shadow fleet</div>
+            <h4>France seizes tanker last loaded at Guanta, Venezuela</h4>
+            <p>French forces boarded the <em>DF Peak</em>, a suspected Russian shadow-fleet tanker whose previous port was listed as Guanta — a reminder of the compliance stakes on the Venezuela lane.</p>
+            <div class="src"><i class="ph ph-arrow-square-out"></i> gCaptain · Oct 12, 2026</div>
+          </a>
+
+          <a class="wire-item" href="https://gcaptain.com/new-reports-reveal-five-more-ships-hit-near-hormuz" target="_blank" rel="noopener">
+            <div class="wtag">Fuel</div>
+            <h4>Fresh Hormuz attacks push Brent back above $105</h4>
+            <p>A wave of vessel strikes around the Strait of Hormuz lifted crude ~2.5% — a reminder that bunker and BAF risk on our transshipment-heavy lanes hasn't gone away.</p>
+            <div class="src"><i class="ph ph-arrow-square-out"></i> gCaptain · Oct 11, 2026</div>
+          </a>
+
+          <div class="wire-foot">Headlines curated from third-party sources and summarized by our desk; each link opens the original. Stella Line is independent and not affiliated with these outlets.</div>
+        </div>
+      </aside>
+    </div><!-- /.mi-layout -->
 
     <!-- subscribe band -->
     <div class="cta-band" style="margin-top:40px;">
