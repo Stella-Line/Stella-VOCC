@@ -40,6 +40,8 @@
   .mi-access { text-align:right; font-size:.76rem; font-weight:700; white-space:nowrap; }
   .a-free{ color:#16a34a; } .a-mem{ color:#b45309; }
   @media(max-width:680px){ .mi-access{ text-align:left; } }
+  [hidden]{ display:none !important; }
+  .mi-noresults{ padding:40px 10px; text-align:center; color:var(--g600); font-size:.95rem; }
 
   /* --- publication layout --- */
   .mi-layout{ display:grid; grid-template-columns:1fr 330px; gap:36px; align-items:start; margin-top:22px; }
@@ -94,21 +96,21 @@
   <div class="wrap">
     <!-- category filters (visual mockup) -->
     <div class="mi-filters">
-      <button class="active">All</button>
-      <button>Market Letter</button>
-      <button>U.S. Gulf</button>
-      <button>South Florida</button>
-      <button>Mexico</button>
-      <button>Caribbean</button>
-      <button>Venezuela</button>
-      <button>Colombia</button>
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="letter">Market Letter</button>
+      <button data-filter="markets">Markets &amp; Rates</button>
+      <button data-filter="venezuela">Venezuela</button>
+      <button data-filter="fuel">Fuel</button>
+      <button data-filter="caribbean">Caribbean</button>
+      <button data-filter="colombia">Colombia</button>
+      <button data-filter="mexico">Mexico</button>
     </div>
 
     <div class="mi-layout">
       <div class="mi-main">
 
         <!-- LEAD STORY: this week's market letter -->
-        <a class="lead-card" href="market-letter.html">
+        <a class="lead-card" data-topic="letter markets" href="market-letter.html">
           <div class="lc-top">
             <span class="lc-tag"><i class="ph ph-lightning"></i> Lead · Markets</span>
             <h2>The peak that wouldn't break finally did — and carriers are fighting to put it back</h2>
@@ -125,8 +127,27 @@
 
         <div class="mi-list">
 
+      <!-- ATOMIZED NEWS STORIES -->
+      <a class="mi-card" data-topic="markets" href="news/transpacific-peak-turns-oct-2026.html">
+        <div><div class="mi-meta">Oct 9, 2026</div><span class="mi-tag t-usg">Markets · Rates</span></div>
+        <div>
+          <h3>Transpacific peak turns as Golden Week flattens rates — carriers answer with FAK hikes</h3>
+          <p>The long climb is over, but mid-October FAK increases aim to defend the floor. What it means for Gulf &amp; Caribbean space.</p>
+        </div>
+        <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
+      </a>
+
+      <a class="mi-card" data-topic="venezuela" href="news/ofac-gl49b-venezuela-ventures.html">
+        <div><div class="mi-meta">Oct 9, 2026</div><span class="mi-tag t-ven">Sanctions · Venezuela</span></div>
+        <div>
+          <h3>OFAC's GL 49B moves Venezuela from moving oil to structuring the deals</h3>
+          <p>New-venture authorizations are the leading edge of the next project-cargo wave — and the compliance line that hasn't moved.</p>
+        </div>
+        <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
+      </a>
+
       <!-- INSIGHTS across regions -->
-      <a class="mi-card" href="insights/fuel-hormuz-bunker-costs.html">
+      <a class="mi-card" data-topic="fuel" href="insights/fuel-hormuz-bunker-costs.html">
         <div><div class="mi-meta">Sep 18, 2026</div><span class="mi-tag" style="background:#ffedd5;color:#9a3412;">Fuel · Hormuz</span></div>
         <div>
           <h3>Fuel &amp; the Strait of Hormuz: what the Iran conflict means for freight costs</h3>
@@ -135,7 +156,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="insights/venezuela-fuel-risk-premium.html">
+      <a class="mi-card" data-topic="venezuela fuel" href="insights/venezuela-fuel-risk-premium.html">
         <div><div class="mi-meta">Sep 25, 2026</div><span class="mi-tag t-ven">Venezuela</span></div>
         <div>
           <h3>Fuel, Hormuz &amp; the Venezuela risk premium: what shippers should watch</h3>
@@ -144,7 +165,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="insights/peak-season-caribbean.html">
+      <a class="mi-card" data-topic="markets caribbean" href="insights/peak-season-caribbean.html">
         <div><div class="mi-meta">Sep 26, 2026</div><span class="mi-tag t-carib">Caribbean · Rates</span></div>
         <div>
           <h3>Is peak season topping out? What it means for Caribbean feeder space</h3>
@@ -153,7 +174,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="insights/colombia-cartagena-capacity.html">
+      <a class="mi-card" data-topic="colombia" href="insights/colombia-cartagena-capacity.html">
         <div><div class="mi-meta">Sep 12, 2026</div><span class="mi-tag t-col">Colombia</span></div>
         <div>
           <h3>Cartagena capacity: what the transshipment squeeze means for Colombia cargo</h3>
@@ -162,7 +183,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="insights/mexico-altamira-veracruz.html">
+      <a class="mi-card" data-topic="mexico" href="insights/mexico-altamira-veracruz.html">
         <div><div class="mi-meta">Sep 5, 2026</div><span class="mi-tag t-mex">Mexico</span></div>
         <div>
           <h3>Altamira &amp; Veracruz: Mexico's Gulf ports as a Caribbean springboard</h3>
@@ -172,7 +193,7 @@
       </a>
 
       <!-- FREE previous letters -->
-      <a class="mi-card" href="market-letter-2026-10-02.html">
+      <a class="mi-card" data-topic="letter" href="market-letter-2026-10-02.html">
         <div><div class="mi-meta">Oct 2, 2026</div><span class="mi-tag t-letter">Weekly Letter</span></div>
         <div>
           <h3>Weekly Market Letter — Venezuela oil trade shows up in the data as the politics catch up</h3>
@@ -181,7 +202,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="market-letter-2026-09-18.html">
+      <a class="mi-card" data-topic="letter" href="market-letter-2026-09-18.html">
         <div><div class="mi-meta">Sep 18, 2026</div><span class="mi-tag t-letter">Weekly Letter</span></div>
         <div>
           <h3>Weekly Market Letter — Venezuela oil door widens as U.S. majors move in</h3>
@@ -190,7 +211,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="market-letter-2026-09-04.html">
+      <a class="mi-card" data-topic="letter" href="market-letter-2026-09-04.html">
         <div><div class="mi-meta">Sep 4, 2026</div><span class="mi-tag t-letter">Weekly Letter</span></div>
         <div>
           <h3>Weekly Market Letter — OFAC widens Venezuela oil trade, and it reaches shipping</h3>
@@ -199,7 +220,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="market-letter-2026-08-28.html">
+      <a class="mi-card" data-topic="letter" href="market-letter-2026-08-28.html">
         <div><div class="mi-meta">Aug 28, 2026</div><span class="mi-tag t-letter">Weekly Letter</span></div>
         <div>
           <h3>Weekly Market Letter — Carriers take the wheel: blank sailings tighten space</h3>
@@ -208,7 +229,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="market-letter-2026-08-14.html">
+      <a class="mi-card" data-topic="letter" href="market-letter-2026-08-14.html">
         <div><div class="mi-meta">Aug 14, 2026</div><span class="mi-tag t-letter">Weekly Letter</span></div>
         <div>
           <h3>Weekly Market Letter — The buyer's window is closing: transpacific rebounds</h3>
@@ -217,7 +238,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="market-letter-2026-08-07.html">
+      <a class="mi-card" data-topic="letter" href="market-letter-2026-08-07.html">
         <div><div class="mi-meta">Aug 7, 2026</div><span class="mi-tag t-letter">Weekly Letter</span></div>
         <div>
           <h3>Weekly Market Letter — Carriers' August hike is failing: advantage, shippers</h3>
@@ -226,7 +247,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="market-letter-2026-07-31.html">
+      <a class="mi-card" data-topic="letter" href="market-letter-2026-07-31.html">
         <div><div class="mi-meta">Jul 31, 2026</div><span class="mi-tag t-letter">Weekly Letter</span></div>
         <div>
           <h3>Weekly Market Letter — The unwind is broad: rates falling on every lane</h3>
@@ -235,7 +256,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="market-letter-2026-07-24.html">
+      <a class="mi-card" data-topic="letter" href="market-letter-2026-07-24.html">
         <div><div class="mi-meta">Jul 24, 2026</div><span class="mi-tag t-letter">Weekly Letter</span></div>
         <div>
           <h3>Weekly Market Letter — Rates ease, but the Iran war keeps Caribbean costs up</h3>
@@ -244,7 +265,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="market-letter-2026-07-17.html">
+      <a class="mi-card" data-topic="letter" href="market-letter-2026-07-17.html">
         <div><div class="mi-meta">Jul 17, 2026</div><span class="mi-tag t-letter">Weekly Letter</span></div>
         <div>
           <h3>Weekly Market Letter — The peak is turning, and fuel comes back into play</h3>
@@ -253,7 +274,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="market-letter-2026-07-10.html">
+      <a class="mi-card" data-topic="letter" href="market-letter-2026-07-10.html">
         <div><div class="mi-meta">Jul 10, 2026</div><span class="mi-tag t-letter">Weekly Letter</span></div>
         <div>
           <h3>Weekly Market Letter — Rates climb again, but is demand peaking?</h3>
@@ -262,7 +283,7 @@
         <div class="mi-access a-free"><i class="ph ph-lock-simple-open"></i> Free</div>
       </a>
 
-      <a class="mi-card" href="market-letter-2026-07-03.html">
+      <a class="mi-card" data-topic="letter" href="market-letter-2026-07-03.html">
         <div><div class="mi-meta">Jul 3, 2026</div><span class="mi-tag t-letter">Weekly Letter</span></div>
         <div>
           <h3>Weekly Market Letter — Peak season runs hot as July surcharges land</h3>
@@ -272,6 +293,7 @@
       </a>
 
         </div><!-- /.mi-list -->
+        <div class="mi-noresults" hidden>No stories in this topic yet — check back soon, or <a href="#" data-reset>view all</a>.</div>
       </div><!-- /.mi-main -->
 
       <!-- RIGHT RAIL: curated news-in-brief -->
@@ -336,6 +358,36 @@
   </div>
 </footer>
 
+  <script>
+  (function(){
+    var pills = document.querySelectorAll('.mi-filters button');
+    var items = document.querySelectorAll('[data-topic]');
+    var nores = document.querySelector('.mi-noresults');
+    function apply(f){
+      var shown = 0;
+      items.forEach(function(el){
+        var t = ' ' + (el.getAttribute('data-topic')||'') + ' ';
+        var match = (f === 'all') || (t.indexOf(' ' + f + ' ') > -1);
+        el.hidden = !match;
+        if (match) shown++;
+      });
+      if (nores) nores.hidden = (shown > 0);
+    }
+    pills.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        pills.forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        apply(btn.getAttribute('data-filter') || 'all');
+      });
+    });
+    var reset = document.querySelector('[data-reset]');
+    if (reset) reset.addEventListener('click', function(e){
+      e.preventDefault();
+      pills.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-filter') === 'all'); });
+      apply('all');
+    });
+  })();
+  </script>
   <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
